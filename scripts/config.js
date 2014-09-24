@@ -1,5 +1,1 @@
-window.config =
-{
-    ClientId: 1,
-    ServerUrl: 'http://qaservice.gma.demo.dashsoft.com/'
-}
+window.config = { ClientId: 1288 , ServerUrl: 'http://services.3alapp.com'}
