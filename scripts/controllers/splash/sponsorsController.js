@@ -20,11 +20,14 @@
           } else {
               if (storage.data.Sponsors.length > 0 && storage.data.ShowSponsorsScreen) {
                   $timeout(function () {
+                      storage.data.IsAppStarting = true;
                       homepageHandler.redirectToHomePage();
                   }, 3000);
               } else {
+                  storage.data.IsAppStarting = true;
                   homepageHandler.redirectToHomePage();
               }
+
           }
 
           

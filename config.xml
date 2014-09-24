@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="GMA-1288_fdd5c153-5dc8-4cd5-8ae1-06a7b35ac9b6" versionCode="7" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="GMA-1288_3efc3f52-c698-4f8b-91af-271e9c7069ea" versionCode="7" version="1.0.0">
   <name>SLAMLEK</name>
   <description>ALSlamlek - ALSlamlek</description>
   <author href="www.dashsoft.com" email="Dashsoft">    Dashsoft  </author>
@@ -35,7 +35,8 @@
   <preference name="LoadingDialog" value="Loading..." />
   <preference name="LoadUrlTimeoutValue" value="20000" />
   <preference name="disable-cursor" value="true" />
-  <preference name="AutoHideSplashScreen " value="false" />
+  <preference name="AutoHideSplashScreen " value="true" />
+  <preference name="auto-hide-splash-screen" value="true" />
   <gap:platform name="ios" />
   <gap:platform name="android" />
   <gap:platform name="winphone" />
@@ -56,5 +57,14 @@
   <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
   <gap:plugin name="org.apache.cordova.file" version="1.0.1" />
   <gap:plugin name="org.apache.cordova.file-transfer" version="0.4.2" />
+  <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.1.0" />
+  <gap:splash gap:platform="ios" width="320" height="480" src="res/screen/ios/screen-iphone-portrait.png" />
+  <gap:splash gap:platform="ios" width="480" height="320" src="res/screen/ios/screen-iphone-landscape.png" />
+  <gap:splash gap:platform="ios" width="640" height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" />
+  <gap:splash gap:platform="ios" width="960" height="640" src="res/screen/ios/screen-iphone-landscape-2x.png" />
+  <gap:splash gap:platform="ios" width="640" height="1136" src="res/screen/ios/screen-iphone-portrait-568h-2x.png" />
+  <gap:splash gap:platform="ios" width="1136" height="640" src="res/screen/ios/screen-iphone-landscape-568h-2x.png" />
+  <gap:splash gap:platform="ios" width="768" height="1024" src="res/screen/ios/screen-ipad-portrait.png" />
+  <gap:splash gap:platform="ios" width="1024" height="768" src="res/screen/ios/screen-ipad-landscape.png" />
   <icon src="icon.png" />
 </widget>

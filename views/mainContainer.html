@@ -4,14 +4,17 @@
         <ion-nav-bar class="bar-calm"
                      animation="nav-title-slide-ios7">
             <ion-nav-buttons side="{{directionAttr}}">
+                <div ng-if="isIos && showIosBackButton">
+                    <ion-nav-back-button class="button-clear">
+                        <i class="button icon-{{directionAttr}} ion-chevron-{{directionAttr}} button-clear"></i>
+                    </ion-nav-back-button>
+                </div>
+            </ion-nav-buttons>
+             <ion-nav-buttons side="{{directionAttr}}">
                 <button menu-toggle="{{directionAttr}}" class="button button-icon icon ion-navicon"></button>
             </ion-nav-buttons>
-            <div ng-if="isIos">
-                <ion-nav-back-button class="button-clear">
-                    <i class="ion-arrow-left-c"></i>
-                </ion-nav-back-button>
-            </div>
-        </ion-nav-bar>
+           
+</ion-nav-bar>
         <div class="error-bar" ng-if="hasError">
             <img src="images/connection-error.png" />
             {{error}}
@@ -19,8 +22,8 @@
         <ion-nav-view name="main" animation="slide-left-right"></ion-nav-view>
 
     </ion-pane>
-    
-    <ion-side-menu side="{{directionAttr}}" class="menu menu-{{directionAttr}}" >
+
+    <ion-side-menu side="{{directionAttr}}" ng-class="menuClass">
         <header class="bar bar-header bar-assertive theme-2">
             <div class="title"></div>
         </header>

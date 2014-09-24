@@ -1,16 +1,24 @@
 (function () {
     'use strict';
     angular.module('GMA').controller('MainController', function ($scope, api, $ionicSideMenuDelegate, menuHandler, $rootScope, serverUrlHandler, storage) {
-        $scope.isIos = ionic.Platform.isIOS();
+        $scope.isIos =  ionic.Platform.isIOS();
         $scope.ThemeCssClass = storage.data.ThemeCssClass;
         $scope.directionClass = "";
         $scope.directionAttr = "left";
+        $scope.menuClass = "menu menu-left";
         if (storage.data.IsRightToLeft == true) {
             $scope.directionClass = "rtl";
             $scope.directionAttr = "right";
+            $scope.menuClass = "menu menu-right";
         }
 
         serverUrlHandler.resolve();
+
+        if (storage.data.IsAppStarting == true) {
+            $scope.showIosBackButton = false;
+        } else {
+            $scope.showIosBackButton = true;
+        }
 
         // show error if exist
         $scope.error = false;
@@ -32,8 +40,11 @@
             var backToSponsors = from.name != "clientInfo" && to.name == "sponsors";
             if (backToSponsors) {
                 // when going to sponsors by back button
-                navigator.app.exitApp();
+                if (!$scope.isIos)
+                    navigator.app.exitApp();
             }
+
+            $scope.showIosBackButton = true;
         });
 
 

@@ -9,7 +9,6 @@
         $scope.ImageLoadCompelete = function () {
             $scope.ImageLoaded = true;
         };
-
         api.client.details().then(function (data) {
             // load client details from server
             storage.data.hasConnectionProblem = false;

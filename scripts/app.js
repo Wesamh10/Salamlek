@@ -15,9 +15,7 @@
             });
 
 
-            cordova.exec(null, null, "SplashScreen", "hide", []);
-            navigator.splashscreen.hide();
-
+            window.plugin.statusbarOverlay.hide();
 
             serverUrlHandler.resolve();
 
