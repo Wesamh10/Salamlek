@@ -869,6 +869,7 @@ body {
     font-size: 23px;
     border-bottom: 2px solid #8A6130;
     border-top: 1px solid #DBBABA;
+
 }
 
 .view.theme-1 .error-bar {
@@ -5181,6 +5182,7 @@ body {
     font-size: 23px;
     border-bottom: 2px solid #1F1D1C;
     border-top: 1px solid #756464;
+
 }
 
 .view.theme-9 .error-bar {
@@ -5235,6 +5237,3 @@ border-radius: 50%;
 box-shadow: 2px 2px 5px 3px #000;
 }
 
-*:not(html) {
-    -webkit-transform: translate3d(0, 0, 0);
-}
